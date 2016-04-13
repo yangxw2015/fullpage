@@ -15,6 +15,7 @@ ul,li{
     border-top: 2px solid white;
     border-left: 2px solid white;
     animation: move 1s 0.8s infinite ease;
+    -webkit-animation: move 1s 0.8s infinite ease;
 }
 @keyframes move {
     0%{
@@ -30,7 +31,21 @@ ul,li{
         opacity: 1;
         transform: scale(1) rotate(45deg);
     }
+}
+@-webkit-keyframes move {
+    0%{
+        opacity: 0;
+        -webkit-transform: scale(0) rotate(45deg);
+    }
 
+    50%{
+        opacity: 0.5;
+        -webkit-transform: scale(0.5) rotate(45deg)
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: scale(1) rotate(45deg);
+    }
 }
 .s1{
     font-size: 0.8rem;
@@ -40,12 +55,15 @@ ul,li{
 }
 .s1>p:nth-child(even){
     transform: translate(200%) rotateZ(660deg);
+    -webkit-transform: translate(200%) rotateZ(660deg);
     transition: 1s 0.8s;
 }
 .s1>p:nth-child(odd){
     transform: translate(-200%) rotateZ(-660deg);
+    -webkit-transform: translate(-200%) rotateZ(-660deg);
     transition: 1.2s 0.8s;
 }
 .s1.active p{
     transform: translate(0) rotateZ(0deg);
+    -webkit-transform: translate(0) rotateZ(0deg);
 }
