@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <title>H5场景</title>
+    <title>绫致时装</title>
     <link rel="stylesheet" href="css/jquery.fullPage.css"/>
     <link rel="stylesheet" href="css/index.css"/>
     <script src="js/jquery-1.8.3.min.js"></script>
@@ -22,23 +22,43 @@
 <body>
 <div class="main">
     <section class="section s1">
-        <p>JACk&JONSE</p>
-        <p>ONLY</p>
-        <p>VERO MODA</p>
-        <p>SELECTED</p>
-        <p>JLINDERG</p>
+        <div><a href="#page2"><img src="images/logo_jj.png" alt=""/></a></div>
+        <div><a href="#page3"><img src="images/logo_jl.png" alt=""/></a></div>
+        <div><a href="#page4"><img src="images/logo_ol.png" alt=""/></a></div>
+        <div><a href="#page5"><img src="images/logo_sld.png" alt=""/></a></div>
+        <div><a href="#page6"><img src="images/logo_vm.png" alt=""/></a></div>
     </section>
-    <section class="section">2</section>
-    <section class="section">3</section>
-    <section class="section">4</section>
-    <section class="section">5</section>
-
+    <section class="section s2">
+        <div class="jack"></div>
+        <p class="logo-jj"><img src="images/logo_jj.png" alt=""/></p>
+        <p class="produce p1">JACK & JONES（杰克琼斯）诞生于1989年，是丹麦BESTSELLER集团旗下的主要品牌之一，主营欧式风格设计男装。</p>
+        <p class="produce p2">1991年，JACK & JONES第一家店铺在挪威特隆赫姆开业，随后便开始在全世界掀起欧式男装浪潮。</p>
+        <p class="produce p3">2000年3月，JACK & JONES 正式进入中国市场，时至今日已经拥有1700多家店铺</p>
+    </section>
+    <section class="section s3">
+        <p class="logo-jl"><img src="images/logo_jl.png" alt=""/></p>
+        <p class="jl">&nbsp;&nbsp;J.LINDEBERG来自瑞典的男装品牌 , 是一家集设计、生产、销售于一体的高级成衣、时装公司</p>
+        <p><img src="images/jl.jpg"/> </p>
+    </section>
+    <section class="section s4">
+        <p class="logo-ol"><img src="images/logo_ol.png"/></p>
+        <p class="only">ONLY为所有生活在世界各大都市的独立、 自由、追求时尚和品质的现代女性设计。代表年轻人活力，有趣的生活方式，充满动感和浓厚的时代气息。</p>
+    </section>
+    <section class="section s5">
+        <p class="logo-sld"><img src="images/logo_sld.png" alt=""/></p>
+        <p class="sld">思莱德（SELECTED）男装是高品味的典型代表，用现代的方式传释古典绅士精神。</p>
+    </section>
+    <section class="section s6">
+        <p class="logo-vm"><img src="images/logo_vm.png" alt=""/></p>
+        <p class="vm">VERO MODA为独立自信的现代女性打造摩登而不失优雅的精致时装，以满足她们生活中多变的着装需求。</p>
+    </section>
 </div>
 <div class="down"></div>
 <script>
     $(function(){
         $(".main").fullpage({
-            sectionsColor:["#fb8c84","#faefb3","#eef880","#86f880","#a1ccfb"],
+            sectionsColor:["#fb8c84","#faefb3","#fcfafb","#86f880","#a1ccfb"],
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5','page6' ],
             loopBottom:true,
             verticalCentered:false
         })

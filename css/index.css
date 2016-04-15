@@ -1,9 +1,21 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Microsoft Yahei', Tahoma, Helvetica, Arial, sans-serif;
 }
 ul,li{
     list-style: none;
+}
+
+img{
+    width: 100%;
+}
+.section{
+    overflow: hidden;
+}
+.s2{
+    background: url("../images/jj_01.jpg") no-repeat;
+    background-size: cover;
 }
 .down{
     position: fixed;
@@ -14,6 +26,8 @@ ul,li{
     height: 0.6rem;
     border-top: 2px solid white;
     border-left: 2px solid white;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     animation: move 1s 0.8s infinite ease;
     -webkit-animation: move 1s 0.8s infinite ease;
 }
@@ -53,17 +67,255 @@ ul,li{
     text-align: center;
     padding-top: 35%;
 }
-.s1>p:nth-child(even){
+.s1>div:nth-child(even){
     transform: translate(200%) rotateZ(660deg);
     -webkit-transform: translate(200%) rotateZ(660deg);
     transition: 1s 0.8s;
 }
-.s1>p:nth-child(odd){
+.s1>div:nth-child(odd){
     transform: translate(-200%) rotateZ(-660deg);
     -webkit-transform: translate(-200%) rotateZ(-660deg);
     transition: 1.2s 0.8s;
 }
-.s1.active p{
+.s1.active div{
+    margin: 0.4rem auto;
+    width: 5rem;
+    height: 0.8rem;
     transform: translate(0) rotateZ(0deg);
     -webkit-transform: translate(0) rotateZ(0deg);
+}
+.s1.active div:nth-child(3){
+    width: 3rem;
+}
+
+
+.s2{
+    padding-top: 0.8rem;
+}
+.s2 .logo-jj{
+    margin: 0 auto 1rem;
+    width: 4.5rem;
+    height: 0.6rem;
+    transform: rotateY(-450deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    -webkit-transform: rotateY(-450deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: left;
+    transition: 1s 0.8s;
+}
+.s2.active .logo-jj{
+    transform: rotateY(0deg);
+}
+.s2 .produce{
+    font-size: 0.35rem;
+    color: #d80716;
+    line-height: 0.6rem;
+    text-indent: 2em;
+    margin: 0.2rem 0;
+}
+.s2 .p1{
+    transform: translateY(-300%);
+    -webkit-transform: translateY(-300%);
+    transition: 1s 1.5s;
+}
+.s2 .p2{
+    transform: translateX(-1100%);
+    -webkit-transform: translateX(-1100%);
+    transition: 1s 2s;
+}
+.s2 .p3{
+    transform: translateY(300%);
+    -webkit-transform: translateY(300%);
+    transition: 1s 2.5s;
+}
+.s2.active .p1,.s2.active .p3{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+.s2.active .p2{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+
+.s3 .logo-jl{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    margin-left: -2.5rem;
+    width: 5rem;
+    transition: 1s 0.8s;
+    transform: scale(0.1);
+    -webkit-transform: scale(0.1);
+}
+.s3 p:nth-child(2){
+    position: absolute;
+    top: 1.8rem;
+    z-index: 3;
+    font-size: 0.4rem;
+    width: 2rem;
+    padding: 0.3rem 0.5rem;
+    transition: 1s 1.5s;
+    transform: rotateZ(230deg) scale(0);
+    -webkit-transform: rotateZ(230deg) scale(0);
+}
+.s3 p:nth-child(3){
+    position: absolute;
+    left: 50%;
+    margin-left: -2.5rem;
+    z-index: 2;
+    width: 5rem;
+    transition: 1s 1.5s;
+    transform: rotateZ(90deg) translate(50%);
+    -webkit-transform: rotateZ(90deg) translate(50%);
+    transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+
+}
+.s3.active .logo-jl{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+.s3.active p:nth-child(2){
+    transform: rotateZ(-20deg) scale(1);
+    -webkit-transform: rotateZ(-20deg) scale(1);
+}
+.s3.active p:nth-child(3){
+    transform: rotateZ(10deg) translate(0);
+    -webkit-transform: rotateZ(10deg) translate(0);
+}
+
+.s4{
+    background: url("../images/only.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.s4 .logo-ol{
+    margin: 2rem auto;
+    width: 3rem;
+    height: 1rem;
+    transition: 1s 0.8s;
+    transform: rotate(360deg) scale(3) translateZ(-10rem);
+    -webkit-transform: rotate(360deg) scale(3) translateZ(-10rem);
+}
+.s4.active .only{
+    font-size: 0.3rem;
+    color: orangered;
+    line-height: 0.5rem;
+    padding: 0.3rem;
+    animation: only 2.5s;
+    -webkit-animation: only 2.5s;
+}
+.s4.active .logo-ol{
+    transform: rotate(0deg) scale(1) translateZ(0);
+    -webkit-transform: rotate(0deg) scale(1) translateZ(0);
+}
+@keyframes only {
+    0%{
+        transform: translateY(100rem);
+    }
+    50%{
+        transform: translateY(50rem) rotate(470deg);
+    }
+    100%{
+        transform: translateY(0) rotate(0deg);
+    }
+}
+@-webkit-keyframes only {
+    0%{
+        -webkit-transform: translateY(100rem);
+    }
+    50%{
+        -webkit-transform: translateY(50rem) rotate(470deg);
+    }
+    100%{
+        -webkit-transform: translateY(0) rotate(0deg);
+    }
+}
+
+.s5.active .logo-sld{
+    margin: 1rem auto;
+    width: 4rem;
+    animation: sld 1.2s;
+    -webkit-animation: sld 1.2s;
+}
+@keyframes sld {
+    0%,20%,40%,60%,80%{
+        transform: translate(-1rem);
+    }
+    10%,30%,50%,70%,90%{
+        transform: translate(1rem);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+@-webkit-keyframes sld {
+    0%,20%,40%,60%,80%{
+        transform: translate(-1rem);
+    }
+    10%,30%,50%,70%,90%{
+        transform: translate(1rem);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+.s5 .sld{
+    transition-delay: 1.2s;
+    transform: translate(-100rem);
+    -webkit-transform: translate(-100rem);
+}
+.s5.active .sld{
+    font-size: 0.35rem;
+    padding: 0.3rem;
+    transform: translate(0);
+    animation: smaller 2.4s 1.2s;
+    -webkit-animation: smaller 2.4s 1.2s;
+}
+@keyframes smaller {
+    0%{
+        transform: scale(0.3) rotate(-360deg) translate(-100rem);
+    }
+    50%{
+        transform: scale(1.3) rotate(360deg) translate(0);
+    }
+    100%{
+        transform: scale(1) rotate(0deg) translate(0);
+    }
+}
+@-webkit-keyframes smaller {
+    0%{
+        -webkit-transform: scale(0.3) rotate(-360deg) translate(-100rem);
+    }
+    50%{
+        -webkit-transform: scale(1.3) rotate(360deg) translate(0);
+    }
+    100%{
+        -webkit-transform: scale(1) rotate(0deg) translate(0);
+    }
+}
+
+.s6{
+    background: url("../images/vm.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.s6 .logo-vm{
+    margin: 0 auto;
+    width: 4rem;
+    transition: 1.2s 0.8s;
+    transform: translate(2rem,8rem) rotate(-360deg);
+    transform-origin: left;
+}
+.s6.active .logo-vm{
+    transform: translate(0,0) rotate(0deg) ;
+}
+.s6 .vm{
+    font-size: 0.35rem;
+    padding: 0.3rem;
+    transition: 1.2s 0.8s;
+    transform: translate(-2rem,8rem) rotate(360deg);
+    transform-origin: right;
+}
+.s6.active .vm{
+    transform: translate(0,0) rotate(0deg) ;
 }
